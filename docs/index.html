@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cranda98 portfolio</title>
+  <title>Lauryn Crandall | Data Science Portfolio</title>
 
   <!-- Base styles always loaded -->
   <link rel="stylesheet" href="css/base.css" />
@@ -47,6 +47,81 @@ make better, data-driven decisions.</p></div>
   <h2>Projects</h2>
 
   <div class="project-grid">
+    
+    <article class="project-card">
+
+      <!-- Project thumbnail image -->
+      <div class="project-image-wrapper">
+        <img
+          src="img/msu_map_graph.png"
+          alt="Thumbnail for MSU Curriculum Mapping &amp; Dependency Visualization"
+          class="project-image"
+        />
+      </div>
+
+      <div class="project-body">
+        <h3 class="project-title">MSU Curriculum Mapping &amp; Dependency Visualization</h3>
+
+        <!-- Short summary written for a non-expert audience -->
+        <p class="project-summary">Built a system to parse, clean, and visualize course prerequisite data at Michigan State University as an interactive directed graph. The tool helps reveal curriculum structure, bottleneck courses, and student pathways across programs.
+</p>
+
+        <!-- Tech stack as pill badges -->
+        <div class="tech-stack">
+          
+          <span class="tech-badge">Python</span>
+          
+          <span class="tech-badge">pandas</span>
+          
+          <span class="tech-badge">NetworkX</span>
+          
+          <span class="tech-badge">Plotly</span>
+          
+          <span class="tech-badge">matplotlib</span>
+          
+          <span class="tech-badge">Jupyter Notebooks</span>
+          
+        </div>
+
+        <!-- Collapsible details (problem / approach / results) -->
+        <details class="project-details">
+          <summary>More details</summary>
+
+          <div class="detail-block">
+            <h4>Problem</h4>
+            <p>MSU&#39;s course prerequisite and co-requisite data is messy and unstructured, making it difficult to understand how courses connect across a degree program. Advisors and researchers lacked a clear visual picture of curriculum dependencies and which courses act as critical bottlenecks for students.
+</p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Approach</h4>
+            <p>Cleaned and standardized raw registrar data, then parsed prerequisite logic using regular expressions to extract structured course relationships. Constructed a directed graph with NetworkX and built both static and interactive visualizations. Developed a reusable Python API so the pipeline can be applied to any MSU major&#39;s data.
+</p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Results &amp; Impact</h4>
+            <p>Delivered a working API and interactive curriculum graph covering CNS majors, with a web-based UI prototype. The tool enables exploration of course dependency chains and DFW rate patterns across the curriculum. Project completed as a capstone collaboration with an MSU academic unit sponsor.
+</p>
+          </div>
+        </details>
+
+        <!-- Links to the GitHub repo and notebook -->
+        <div class="project-links">
+          
+          <a href="https://github.com/JackRobertson77/MSU_Curriculum_Maps" target="_blank" rel="noopener" class="btn btn-repo">
+            View Repo
+          </a>
+          
+          
+          <a href="https://github.com/JackRobertson77/MSU_Curriculum_Maps/blob/main/api/API_Demo.ipynb" target="_blank" rel="noopener" class="btn btn-notebook">
+            View Notebook
+          </a>
+          
+        </div>
+      </div>
+
+    </article>
     
     <article class="project-card">
 
@@ -130,17 +205,17 @@ make better, data-driven decisions.</p></div>
       <!-- Project thumbnail image -->
       <div class="project-image-wrapper">
         <img
-          src="img/msu_map_graph.png"
-          alt="Thumbnail for MSU Curriculum Mapping &amp; Dependency Visualization"
+          src="img/ge_analytics_dashboard.png"
+          alt="Thumbnail for Lean Analytics: Cycle Time &amp; Delivery Performance"
           class="project-image"
         />
       </div>
 
       <div class="project-body">
-        <h3 class="project-title">MSU Curriculum Mapping &amp; Dependency Visualization</h3>
+        <h3 class="project-title">Lean Analytics: Cycle Time &amp; Delivery Performance</h3>
 
         <!-- Short summary written for a non-expert audience -->
-        <p class="project-summary">Built a system to parse, clean, and visualize course prerequisite data at Michigan State University as an interactive directed graph. The tool helps reveal curriculum structure, bottleneck courses, and student pathways across programs.
+        <p class="project-summary">Built a suite of Python tools during a General Electric internship to analyze software delivery performance from Microsoft Teams Planner data. The tools calculate cycle times and on-time delivery rates to help engineering teams identify bottlenecks and improve throughput.
 </p>
 
         <!-- Tech stack as pill badges -->
@@ -150,13 +225,9 @@ make better, data-driven decisions.</p></div>
           
           <span class="tech-badge">pandas</span>
           
-          <span class="tech-badge">NetworkX</span>
-          
-          <span class="tech-badge">Plotly</span>
-          
           <span class="tech-badge">matplotlib</span>
           
-          <span class="tech-badge">Jupyter Notebooks</span>
+          <span class="tech-badge">openpyxl</span>
           
         </div>
 
@@ -166,19 +237,19 @@ make better, data-driven decisions.</p></div>
 
           <div class="detail-block">
             <h4>Problem</h4>
-            <p>MSU&#39;s course prerequisite and co-requisite data is messy and unstructured, making it difficult to understand how courses connect across a degree program. Advisors and researchers lacked a clear visual picture of curriculum dependencies and which courses act as critical bottlenecks for students.
+            <p>GE engineering teams tracked tasks in Microsoft Teams Planner but had no easy way to extract lean metrics like cycle time or delivery delta from the raw export data. Without visibility into these numbers, teams struggled to identify bottlenecks during retrospectives.
 </p>
           </div>
 
           <div class="detail-block">
             <h4>Approach</h4>
-            <p>Cleaned and standardized raw registrar data, then parsed prerequisite logic using regular expressions to extract structured course relationships. Constructed a directed graph with NetworkX and built both static and interactive visualizations. Developed a reusable Python API so the pipeline can be applied to any MSU major&#39;s data.
+            <p>Wrote scripts to ingest Teams Planner Excel exports and calculate cycle times for completed and in-progress tasks. Built a 3-pass deduplication algorithm to correctly match tasks across bucket transitions. Generated per-artifact and per-feature delivery charts, plus weekly stacked bar charts of on-time vs. late completions.
 </p>
           </div>
 
           <div class="detail-block">
             <h4>Results &amp; Impact</h4>
-            <p>Delivered a working API and interactive curriculum graph covering CNS majors, with a web-based UI prototype. The tool enables exploration of course dependency chains and DFW rate patterns across the curriculum. Project completed as a capstone collaboration with an MSU academic unit sponsor.
+            <p>Delivered visualizations and metrics used directly in engineering team retrospectives at GE. Tools were refactored post-internship for portability — hardcoded paths replaced with CLI arguments and logic modularized for reuse across any Teams Planner export.
 </p>
           </div>
         </details>
@@ -186,14 +257,10 @@ make better, data-driven decisions.</p></div>
         <!-- Links to the GitHub repo and notebook -->
         <div class="project-links">
           
-          <a href="https://github.com/JackRobertson77/MSU_Curriculum_Maps" target="_blank" rel="noopener" class="btn btn-repo">
+          <a href="https://github.com/cranda98/GE_Internship" target="_blank" rel="noopener" class="btn btn-repo">
             View Repo
           </a>
           
-          
-          <a href="https://github.com/JackRobertson77/MSU_Curriculum_Maps/blob/main/api/API_Demo.ipynb" target="_blank" rel="noopener" class="btn btn-notebook">
-            View Notebook
-          </a>
           
         </div>
       </div>
