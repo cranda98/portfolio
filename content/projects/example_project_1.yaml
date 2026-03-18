@@ -1,47 +1,40 @@
-# ============================================================
-# content/projects/example_project_1.yaml
-# ============================================================
-# Example project: Predicting the Best Nap Spots on Campus
-# Copy this file to create your own project entries.
-# ============================================================
-
-title: "Optimal Nap Spot Prediction Across Campus"
+title: "Bird Species Classifier"
 
 short_summary: >
-  Built a model to identify the best nap locations on MSU's campus based
-  on sunlight exposure, foot traffic, grass quality, and proximity to
-  food smells. Findings have been peer-reviewed by three other dogs and
-  were described as "life-changing" and "very good."
+  Built a deep learning pipeline to automatically identify bird species
+  from trail camera images using MobileNetV2. Benchmarked serial vs.
+  batch inference on MSU's HPC cluster, achieving a 4x speedup with
+  batch processing.
 
 tech_stack:
   - Python
-  - scikit-learn
+  - TensorFlow / Keras
+  - OpenCV
+  - NumPy
   - pandas
-  - matplotlib
+  - SLURM (MSU HPCC)
   - Jupyter Notebooks
 
 problem_statement: >
-  Finding a good nap spot is harder than it looks. Campus is large,
-  conditions change throughout the day, and the best patches of sun
-  move. A mascot operating on intuition alone wastes valuable resting
-  time — a problem that affects productivity, morale, and tail-wagging
-  rates across the entire campus community.
+  Wildlife monitoring with trail cameras produces large volumes of images
+  that are slow to label by hand. This project explored using a
+  pre-trained CNN to automate bird species identification and evaluated
+  how batch processing compares to serial inference when scaling to
+  thousands of images.
 
 approach: >
-  Collected location data across 47 candidate nap sites over a full
-  academic semester. Features included average daily sunlight (hours),
-  grass softness score (1–10, assessed manually), nearby food-cart
-  proximity, and pedestrian traffic by hour. Trained a gradient boosting
-  classifier to predict a site's "nap quality" rating and used SHAP
-  values to explain which features mattered most.
+  Applied MobileNetV2 (pre-trained on ImageNet) to 250 bird images.
+  Wrote separate serial and batch inference scripts and ran both on
+  MSU's HPCC via SLURM job scripts. Evaluated accuracy against 20
+  hand-labeled images and visualized performance results.
 
 results_impact: >
-  The model achieved 89% accuracy on held-out test sites. Sunlight
-  duration and grass softness were the top two predictive features,
-  while proximity to the student union food court provided a meaningful
-  but secondary boost. A ranked list of top-10 nap sites was distributed
-  to the campus dog community and has since been downloaded 847 times.
+  Batch inference completed in 4.43s vs. 18.94s for serial — a ~4x
+  speedup. Top-1 accuracy on labeled images was 15% exact match and
+  40% within genus/family, consistent with an off-the-shelf ImageNet
+  model not fine-tuned on bird species. Identified fine-tuning on a
+  bird-specific dataset (e.g. CUB-200) as a clear next step.
 
-repo_url: "https://github.com/zeke-wonder-dog/nap-spot-predictor"
-notebook_url: "https://github.com/zeke-wonder-dog/nap-spot-predictor/blob/main/analysis.ipynb"
-image_path: "img/placeholder_project_1.png"
+repo_url: "https://github.com/cranda98/Bird-Classifier"
+notebook_url: "https://github.com/cranda98/Bird-Classifier/blob/main/bird_species_classifier.ipynb"
+image_path: "img/batch_vs_serial.png"
