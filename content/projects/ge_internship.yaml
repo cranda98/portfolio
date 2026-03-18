@@ -1,0 +1,35 @@
+title: "Lean Analytics: Cycle Time & Delivery Performance"
+
+short_summary: >
+  Built a suite of Python tools during a General Electric internship to
+  analyze software delivery performance from Microsoft Teams Planner data.
+  The tools calculate cycle times and on-time delivery rates to help
+  engineering teams identify bottlenecks and improve throughput.
+
+tech_stack:
+  - Python
+  - pandas
+  - matplotlib
+  - openpyxl
+
+problem_statement: >
+  GE engineering teams tracked tasks in Microsoft Teams Planner but had
+  no easy way to extract lean metrics like cycle time or delivery delta
+  from the raw export data. Without visibility into these numbers, teams
+  struggled to identify bottlenecks during retrospectives.
+
+approach: >
+  Wrote scripts to ingest Teams Planner Excel exports and calculate cycle
+  times for completed and in-progress tasks. Built a 3-pass deduplication
+  algorithm to correctly match tasks across bucket transitions. Generated
+  per-artifact and per-feature delivery charts, plus weekly stacked bar
+  charts of on-time vs. late completions.
+
+results_impact: >
+  Delivered visualizations and metrics used directly in engineering team
+  retrospectives at GE. Tools were refactored post-internship for
+  portability — hardcoded paths replaced with CLI arguments and logic
+  modularized for reuse across any Teams Planner export.
+
+repo_url: "https://github.com/cranda98/GE_Internship"
+image_path: "img/placeholder_project_1.png"
