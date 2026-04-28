@@ -1,0 +1,43 @@
+title: "NYC 311 Complaint Prediction"
+
+short_summary: >
+  Built an AWS-based machine learning model to predict NYC 311 complaint
+  categories and help operators route calls faster to the right agency.
+  Identified and removed a key data leakage issue (the 'agency' field)
+  that was creating artificially perfect 85% accuracy, achieving realistic
+  48.4% accuracy — 2x better than random guessing.
+
+tech_stack:
+  - AWS (S3, Athena, SageMaker)
+  - Python
+  - scikit-learn
+  - pandas
+  - Logistic Regression
+  - Jupyter Notebooks
+
+problem_statement: >
+  NYC 311 operators receive thousands of calls daily and must manually
+  determine which agency should handle each complaint (NYPD, HPD, DSNY,
+  etc.). This manual routing takes time and leads to misrouting,
+  especially for overnight calls when fewer staff are available.
+
+approach: >
+  Loaded 157,000+ 311 service requests from AWS S3 using a boto3 pipeline.
+  Preprocessed data with pandas and scikit-learn, encoding categorical
+  variables and scaling numerical features. Trained a multiclass Logistic
+  Regression baseline model. Discovered that including the 'agency' column
+  created unrealistic 85% accuracy (model was memorizing that HPD = Housing,
+  DSNY = Sanitation), so removed it for realistic real-world predictions.
+  Evaluated with accuracy, precision, recall, and confusion matrix.
+
+results_impact: >
+  Final model achieves 48.4% accuracy without agency — 2x better than
+  random guessing (25%). Correctly identifies Housing as the top complaint
+  at 2am in residential Bronx zip codes (249 calls), directly answering
+  the stakeholder's routing question. The model demonstrates that pure
+  time/location data can provide useful routing suggestions even without
+  knowing the agency upfront.
+
+repo_url: "https://github.com/cranda98/aws-nyc311-cranda98"
+notebook_url: "https://github.com/cranda98/aws-nyc311-cranda98/blob/main/notebook/modeling_train_and_eval.ipynb"
+image_path: "img/matrix.png"

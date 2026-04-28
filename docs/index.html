@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/base.css" />
 
   <!-- Theme stylesheet — controlled by `theme` in portfolio_config.yaml -->
-  <link rel="stylesheet" href="css/themes/msu-dark.css" />
+  <link rel="stylesheet" href="css/themes/earthy.css" />
 </head>
 <body>
 
@@ -35,11 +35,10 @@
 <!-- ===== About section ===== -->
 <section id="about" class="section about-section">
   <h2>About Me</h2>
-  <div class="about-text"><p>MSU graduate with a passion for solving real-world issues with numbers
-and graphs. I love turning messy data into clear, actionable insights
-that make a difference.</p>
-<p>I thrive in collaborative environments and love supporting teams to
-make better, data-driven decisions.</p></div>
+  <div class="about-text"><p>Data Science graduate from Michigan State University with hands-on experience building data pipelines, 
+wrangling large datasets,and delivering insights that actually get used. I've worked across both 
+research and industry settings, and I thrive in collaborative, office environments where I can be 
+the technical person quietly making things run smoother. Fast learner, hard worker, and always looking to drive change from the inside.</p></div>
 </section>
 
 <!-- ===== Projects section ===== -->
@@ -63,7 +62,7 @@ make better, data-driven decisions.</p></div>
         <h3 class="project-title">MSU Curriculum Mapping &amp; Dependency Visualization</h3>
 
         <!-- Short summary written for a non-expert audience -->
-        <p class="project-summary">Built a system to parse, clean, and visualize course prerequisite data at Michigan State University as an interactive directed graph. The tool helps reveal curriculum structure, bottleneck courses, and student pathways across programs.
+        <p class="project-summary">Built a system to parse, clean, and visualize course prerequisite data at Michigan State University as a directed graph. The tool reveals curriculum structure, bottleneck courses, and student pathways, with a functional API and a web-based UI prototype.
 </p>
 
         <!-- Tech stack as pill badges -->
@@ -81,6 +80,8 @@ make better, data-driven decisions.</p></div>
           
           <span class="tech-badge">Jupyter Notebooks</span>
           
+          <span class="tech-badge">Regular Expressions (regex)</span>
+          
         </div>
 
         <!-- Collapsible details (problem / approach / results) -->
@@ -89,19 +90,19 @@ make better, data-driven decisions.</p></div>
 
           <div class="detail-block">
             <h4>Problem</h4>
-            <p>MSU&#39;s course prerequisite and co-requisite data is messy and unstructured, making it difficult to understand how courses connect across a degree program. Advisors and researchers lacked a clear visual picture of curriculum dependencies and which courses act as critical bottlenecks for students.
+            <p>MSU&#39;s raw course prerequisite data is messy and unstructured, making it difficult to understand how courses connect across a degree program. Advisors and researchers lacked a clear way to visualize dependencies or identify critical bottleneck courses affecting student progress.
 </p>
           </div>
 
           <div class="detail-block">
             <h4>Approach</h4>
-            <p>Cleaned and standardized raw registrar data, then parsed prerequisite logic using regular expressions to extract structured course relationships. Constructed a directed graph with NetworkX and built both static and interactive visualizations. Developed a reusable Python API so the pipeline can be applied to any MSU major&#39;s data.
+            <p>Cleaned and standardized raw registrar data, then parsed prerequisite logic using regular expressions to extract structured relationships. Built a directed graph with NetworkX and created both static and interactive visualizations with Plotly. Developed a reusable Python API (demonstrated in `api/API_Demo.ipynb`) and a web-based UI prototype in the `webapi/` folder, so the pipeline can be applied to any MSU major.
 </p>
           </div>
 
           <div class="detail-block">
             <h4>Results &amp; Impact</h4>
-            <p>Delivered a working API and interactive curriculum graph covering CNS majors, with a web-based UI prototype. The tool enables exploration of course dependency chains and DFW rate patterns across the curriculum. Project completed as a capstone collaboration with an MSU academic unit sponsor.
+            <p>Delivered a working API and interactive curriculum graph covering CNS majors, with a prototype web UI for broader exploration. The tool enables analysis of course dependency chains and DFW rate patterns. Completed as a team capstone project with an MSU academic unit sponsor, with all code and reproducibility steps documented in the repository.
 </p>
           </div>
         </details>
@@ -128,17 +129,17 @@ make better, data-driven decisions.</p></div>
       <!-- Project thumbnail image -->
       <div class="project-image-wrapper">
         <img
-          src="img/batch_vs_serial.png"
-          alt="Thumbnail for Bird Species Classifier"
+          src="img/concord.png"
+          alt="Thumbnail for Educational Log Analysis Toolkit"
           class="project-image"
         />
       </div>
 
       <div class="project-body">
-        <h3 class="project-title">Bird Species Classifier</h3>
+        <h3 class="project-title">Educational Log Analysis Toolkit</h3>
 
         <!-- Short summary written for a non-expert audience -->
-        <p class="project-summary">Built a deep learning pipeline to automatically identify bird species from trail camera images using MobileNetV2. Benchmarked serial vs. batch inference on MSU&#39;s HPC cluster, achieving a 4x speedup with batch processing.
+        <p class="project-summary">Extended and maintain a Python toolkit for processing large educational log files from Concord Consortium tools. Added a new script to clean messy student text responses (removing HTML, encoding issues, and copied text), made the entire toolkit Mac-compatible, and keep scripts operational as file formats evolve.
 </p>
 
         <!-- Tech stack as pill badges -->
@@ -146,17 +147,15 @@ make better, data-driven decisions.</p></div>
           
           <span class="tech-badge">Python</span>
           
-          <span class="tech-badge">TensorFlow / Keras</span>
-          
-          <span class="tech-badge">OpenCV</span>
-          
-          <span class="tech-badge">NumPy</span>
-          
           <span class="tech-badge">pandas</span>
           
-          <span class="tech-badge">SLURM (MSU HPCC)</span>
+          <span class="tech-badge">JSON/CSV parsing</span>
           
-          <span class="tech-badge">Jupyter Notebooks</span>
+          <span class="tech-badge">Regular expressions</span>
+          
+          <span class="tech-badge">Command-line tools</span>
+          
+          <span class="tech-badge">Cross-platform development (Windows → Mac)</span>
           
         </div>
 
@@ -166,19 +165,19 @@ make better, data-driven decisions.</p></div>
 
           <div class="detail-block">
             <h4>Problem</h4>
-            <p>Wildlife monitoring with trail cameras produces large volumes of images that are slow to label by hand. This project explored using a pre-trained CNN to automate bird species identification and evaluated how batch processing compares to serial inference when scaling to thousands of images.
+            <p>Educational platforms generate messy log files with nested JSON and unreadable student text responses (encoding errors, HTML tags, copied content). The existing toolkit was Windows-only and lacked text cleaning. Researchers needed a cross-platform solution to analyze genuine student writing.
 </p>
           </div>
 
           <div class="detail-block">
             <h4>Approach</h4>
-            <p>Applied MobileNetV2 (pre-trained on ImageNet) to 250 bird images. Wrote separate serial and batch inference scripts and ran both on MSU&#39;s HPCC via SLURM job scripts. Evaluated accuracy against 20 hand-labeled images and visualized performance results.
+            <p>Extended the existing Python toolkit by adding a student text response cleaner that detects and strips copied text from shared classroom tiles, removes HTML formatting, and normalizes encoding. Ported the entire toolkit from Windows-only to Mac-compatible. Maintain all scripts (date analysis, file splitting, JSON extraction, de-identification) to handle schema changes over multiple semesters.
 </p>
           </div>
 
           <div class="detail-block">
             <h4>Results &amp; Impact</h4>
-            <p>Batch inference completed in 4.43s vs. 18.94s for serial — a ~4x speedup. Top-1 accuracy on labeled images was 15% exact match and 40% within genus/family, consistent with an off-the-shelf ImageNet model not fine-tuned on bird species. Identified fine-tuning on a bird-specific dataset (e.g. CUB-200) as a clear next step.
+            <p>The text cleaner now automatically processes 100,000+ record datasets, outputting separate files for original vs. total student writing. Mac compatibility expanded the toolkit&#39;s user base to the whole research team. Maintained ~4x speedup over manual processing while enabling privacy-compliant data sharing.
 </p>
           </div>
         </details>
@@ -186,14 +185,10 @@ make better, data-driven decisions.</p></div>
         <!-- Links to the GitHub repo and notebook -->
         <div class="project-links">
           
-          <a href="https://github.com/cranda98/Bird-Classifier" target="_blank" rel="noopener" class="btn btn-repo">
+          <a href="https://github.com/cranda98/log-analysis-scripts" target="_blank" rel="noopener" class="btn btn-repo">
             View Repo
           </a>
           
-          
-          <a href="https://github.com/cranda98/Bird-Classifier/blob/main/bird_species_classifier.ipynb" target="_blank" rel="noopener" class="btn btn-notebook">
-            View Notebook
-          </a>
           
         </div>
       </div>
@@ -261,6 +256,81 @@ make better, data-driven decisions.</p></div>
             View Repo
           </a>
           
+          
+        </div>
+      </div>
+
+    </article>
+    
+    <article class="project-card">
+
+      <!-- Project thumbnail image -->
+      <div class="project-image-wrapper">
+        <img
+          src="img/matrix.png"
+          alt="Thumbnail for NYC 311 Complaint Prediction"
+          class="project-image"
+        />
+      </div>
+
+      <div class="project-body">
+        <h3 class="project-title">NYC 311 Complaint Prediction</h3>
+
+        <!-- Short summary written for a non-expert audience -->
+        <p class="project-summary">Built an AWS-based machine learning model to predict NYC 311 complaint categories and help operators route calls faster to the right agency. Identified and removed a key data leakage issue (the &#39;agency&#39; field) that was creating artificially perfect 85% accuracy, achieving realistic 48.4% accuracy — 2x better than random guessing.
+</p>
+
+        <!-- Tech stack as pill badges -->
+        <div class="tech-stack">
+          
+          <span class="tech-badge">AWS (S3, Athena, SageMaker)</span>
+          
+          <span class="tech-badge">Python</span>
+          
+          <span class="tech-badge">scikit-learn</span>
+          
+          <span class="tech-badge">pandas</span>
+          
+          <span class="tech-badge">Logistic Regression</span>
+          
+          <span class="tech-badge">Jupyter Notebooks</span>
+          
+        </div>
+
+        <!-- Collapsible details (problem / approach / results) -->
+        <details class="project-details">
+          <summary>More details</summary>
+
+          <div class="detail-block">
+            <h4>Problem</h4>
+            <p>NYC 311 operators receive thousands of calls daily and must manually determine which agency should handle each complaint (NYPD, HPD, DSNY, etc.). This manual routing takes time and leads to misrouting, especially for overnight calls when fewer staff are available.
+</p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Approach</h4>
+            <p>Loaded 157,000+ 311 service requests from AWS S3 using a boto3 pipeline. Preprocessed data with pandas and scikit-learn, encoding categorical variables and scaling numerical features. Trained a multiclass Logistic Regression baseline model. Discovered that including the &#39;agency&#39; column created unrealistic 85% accuracy (model was memorizing that HPD = Housing, DSNY = Sanitation), so removed it for realistic real-world predictions. Evaluated with accuracy, precision, recall, and confusion matrix.
+</p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Results &amp; Impact</h4>
+            <p>Final model achieves 48.4% accuracy without agency — 2x better than random guessing (25%). Correctly identifies Housing as the top complaint at 2am in residential Bronx zip codes (249 calls), directly answering the stakeholder&#39;s routing question. The model demonstrates that pure time/location data can provide useful routing suggestions even without knowing the agency upfront.
+</p>
+          </div>
+        </details>
+
+        <!-- Links to the GitHub repo and notebook -->
+        <div class="project-links">
+          
+          <a href="https://github.com/cranda98/aws-nyc311-cranda98" target="_blank" rel="noopener" class="btn btn-repo">
+            View Repo
+          </a>
+          
+          
+          <a href="https://github.com/cranda98/aws-nyc311-cranda98/blob/main/notebook/modeling_train_and_eval.ipynb" target="_blank" rel="noopener" class="btn btn-notebook">
+            View Notebook
+          </a>
           
         </div>
       </div>

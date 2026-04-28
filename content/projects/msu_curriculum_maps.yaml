@@ -2,9 +2,9 @@ title: "MSU Curriculum Mapping & Dependency Visualization"
 
 short_summary: >
   Built a system to parse, clean, and visualize course prerequisite data
-  at Michigan State University as an interactive directed graph. The tool
-  helps reveal curriculum structure, bottleneck courses, and student
-  pathways across programs.
+  at Michigan State University as a directed graph. The tool reveals
+  curriculum structure, bottleneck courses, and student pathways, with a
+  functional API and a web-based UI prototype.
 
 tech_stack:
   - Python
@@ -13,27 +13,29 @@ tech_stack:
   - Plotly
   - matplotlib
   - Jupyter Notebooks
+  - Regular Expressions (regex)
 
 problem_statement: >
-  MSU's course prerequisite and co-requisite data is messy and
-  unstructured, making it difficult to understand how courses connect
-  across a degree program. Advisors and researchers lacked a clear
-  visual picture of curriculum dependencies and which courses act as
-  critical bottlenecks for students.
+  MSU's raw course prerequisite data is messy and unstructured, making
+  it difficult to understand how courses connect across a degree program.
+  Advisors and researchers lacked a clear way to visualize dependencies
+  or identify critical bottleneck courses affecting student progress.
 
 approach: >
   Cleaned and standardized raw registrar data, then parsed prerequisite
-  logic using regular expressions to extract structured course
-  relationships. Constructed a directed graph with NetworkX and built
-  both static and interactive visualizations. Developed a reusable Python
-  API so the pipeline can be applied to any MSU major's data.
+  logic using regular expressions to extract structured relationships.
+  Built a directed graph with NetworkX and created both static and
+  interactive visualizations with Plotly. Developed a reusable Python
+  API (demonstrated in `api/API_Demo.ipynb`) and a web-based UI prototype
+  in the `webapi/` folder, so the pipeline can be applied to any MSU
+  major.
 
 results_impact: >
   Delivered a working API and interactive curriculum graph covering CNS
-  majors, with a web-based UI prototype. The tool enables exploration of
-  course dependency chains and DFW rate patterns across the curriculum.
-  Project completed as a capstone collaboration with an MSU academic unit
-  sponsor.
+  majors, with a prototype web UI for broader exploration. The tool
+  enables analysis of course dependency chains and DFW rate patterns.
+  Completed as a team capstone project with an MSU academic unit sponsor,
+  with all code and reproducibility steps documented in the repository.
 
 repo_url: "https://github.com/JackRobertson77/MSU_Curriculum_Maps"
 notebook_url: "https://github.com/JackRobertson77/MSU_Curriculum_Maps/blob/main/api/API_Demo.ipynb"

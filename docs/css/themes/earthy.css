@@ -1,0 +1,108 @@
+/* ============================================================
+   themes/earthy.css  —  Warm earthy color palette.
+
+   Palette:
+     Cream (background)        #FFF8E8
+     Warm tan (card/section)   #F7EED3
+     Sage green (accent)       #AAB396
+     Dark brown (text/buttons) #674636
+   ============================================================ */
+
+body {
+  background-color: #FFF8E8;
+  color: #674636;
+}
+
+a {
+  color: #674636;
+}
+
+a:hover {
+  color: #AAB396;
+  text-decoration: none;
+}
+
+/* Header */
+.site-header {
+  background-color: #674636;
+  border-bottom: 4px solid #AAB396;
+}
+
+.header-name {
+  color: #FFF8E8;
+}
+
+.header-tagline {
+  color: #F7EED3;
+}
+
+.site-nav a {
+  color: #F7EED3;
+}
+
+.site-nav a:hover {
+  color: #AAB396;
+}
+
+/* Section headings */
+.section h2 {
+  color: #674636;
+  border-color: #AAB396;
+}
+
+/* Project card */
+.project-card {
+  background-color: #F7EED3;
+  border: 1px solid #AAB396;
+}
+
+.project-title {
+  color: #674636;
+}
+
+.project-summary {
+  color: #674636;
+}
+
+/* Tech badges */
+.tech-badge {
+  background-color: #AAB396;
+  color: #674636;
+}
+
+/* Details */
+.project-details {
+  color: #674636;
+}
+
+.detail-block h4 {
+  color: #674636;
+}
+
+/* Buttons */
+.btn-repo {
+  background-color: #674636;
+  color: #FFF8E8;
+}
+
+.btn-notebook {
+  background-color: #674636;
+  color: #FFF8E8;
+  border: 1px solid #AAB396;
+}
+
+/* Contact */
+.contact-list a {
+  color: #674636;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #F7EED3;
+  border-top: 4px solid #AAB396;
+  color: #674636;
+}
+
+.site-footer a {
+  color: #674636;
+}

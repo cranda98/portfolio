@@ -15,8 +15,10 @@ student_file: content/lauryn_crandall.yaml
 # Remove example projects and add your own once you're ready.
 projects:
   - content/projects/msu_curriculum_maps.yaml
-  - content/projects/bird_classifier.yaml
+  - content/projects/concord.yaml
   - content/projects/ge_internship.yaml
+  - content/projects/aws.yaml
+
 
 # --- Theme ---
 # Built-in options: "light", "dark", "msu-light", "msu-dark"
