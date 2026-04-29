@@ -34,8 +34,7 @@ results_impact: >
   The text cleaner now automatically processes 100,000+ record datasets,
   outputting separate files for original vs. total student writing. Mac
   compatibility expanded the toolkit's user base to the whole research
-  team. Maintained ~4x speedup over manual processing while enabling
-  privacy-compliant data sharing.
+  team.
 
 repo_url: "https://github.com/cranda98/log-analysis-scripts"
 image_path: "img/concord.png"
